@@ -1,0 +1,22 @@
+# 依赖
+node_modules/
+
+# 凭证（勿提交）
+.env
+.env.*
+
+# 运行产物（示例成片 final.mp4 作为 demo 提交，不忽略）
+projects/
+examples/*/clips/
+examples/*/audio/
+examples/*/cards/
+examples/*/seg_*.mp4
+examples/*/concat.txt
+examples/*/check/
+_final.mp4
+final_tmp.mp4
+
+# 系统
+.DS_Store
+Thumbs.db
+*.log
