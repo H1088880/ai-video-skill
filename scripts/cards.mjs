@@ -3,7 +3,6 @@
 //    否则 Playwright 元素截图抓到的是该区域最上层像素（最后一张卡），不是元素本身。
 import fs from "node:fs";
 import path from "node:path";
-import os from "node:os";
 import { fileURLToPath } from "node:url";
 
 const SKILL_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -21,7 +20,6 @@ async function resolvePlaywright() {
     "playwright",
     path.join(SKILL_ROOT, "node_modules", "playwright", "index.mjs"),
     path.join(process.cwd(), "node_modules", "playwright", "index.mjs"),
-    path.join(os.homedir(), ".workbuddy", "skills", "whiteboard-video", "node_modules", "playwright", "index.mjs"),
   ].filter(Boolean);
   for (const c of cands) {
     try {

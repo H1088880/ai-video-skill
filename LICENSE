@@ -78,17 +78,5 @@ limitations under the License.
 
 **Copyright (c) 2026 H1088880** —— 本仓库（ai-video-skill）的作者与版权人，整体以 Apache-2.0 许可发布。
 
-本 skill 由 H1088880 基于自研的 `ai-video` 视频流水线改版而成——流水线编排、卡片渲染、
-ffmpeg 拼装、字幕断句等均为本仓库原创实现。其中 `scripts/vo.mjs` 的火山引擎（豆包）TTS
-模块复用本人维护的 whiteboard-video skill；该 skill 最初源自
-[trustfuture/simon-skills](https://github.com/trustfuture/simon-skills)（MIT），在此一并致谢：
-
-```
-MIT License
-
-Copyright (c) 2026 trustfuture  原始项目：https://github.com/trustfuture/simon-skills
-Copyright (c) 2026 H1088880    派生版本的修改与增补
-```
-
-许可范围：`scripts/vo.mjs` 中火山 TTS 相关代码沿用 **MIT License** 条款；本仓库其余部分
-（`make.mjs` / `cards.mjs` / `assemble.mjs` / `paths.mjs` 及文档）以 **Apache License 2.0** 发布。
+本 skill 由 H1088880 基于自研的 `ai-video` 视频流水线改版而成：流水线编排、火山豆包 TTS 调用、
+卡片渲染、ffmpeg 拼装、字幕断句与时长对齐等均为本仓库原创实现。

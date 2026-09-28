@@ -12,7 +12,7 @@ visibility: "public"
 ---
 > 中文触发词：AI 视频、文生视频出片、短视频流水线、宣传片短片、ai video、video pipeline。
 >
-> **作者与版权**：H1088880（Copyright (c) 2026 H1088880）。本 skill 由作者基于自研 `ai-video` 流水线改版；`scripts/vo.mjs` 火山 TTS 模块复用本人维护的 whiteboard-video（上游 trustfuture/simon-skills，MIT），详见 `LICENSE` 与 `README`。
+> **作者与版权**：H1088880（Copyright (c) 2026 H1088880）。本 skill 由作者基于自研 `ai-video` 流水线改版，所有实现均为原创。
 
 # ai-video-skill：AI 视频生产线
 
@@ -90,6 +90,4 @@ node scripts/make.mjs projects/我的短片
 
 - **作者 / 版权**：[H1088880](https://github.com/H1088880) — Copyright (c) 2026 H1088880
 - **许可**：Apache License 2.0，见 `LICENSE`
-- **署名**：本 skill 由作者基于自研的 `ai-video` 流水线改版；其中 `scripts/vo.mjs` 的火山 TTS
-  模块复用本人维护的 whiteboard-video，其上游为 [trustfuture/simon-skills](https://github.com/trustfuture/simon-skills)
-  （MIT，Copyright (c) 2026 trustfuture），该部分沿用 MIT 条款并保留原版权声明。
+- **说明**：本 skill 由作者基于自研的 `ai-video` 流水线改版，流水线编排、火山 TTS、卡片渲染、ffmpeg 拼装、字幕断句等实现均为原创。
