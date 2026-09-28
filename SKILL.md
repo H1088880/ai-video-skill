@@ -1,5 +1,6 @@
 ---
 name: ai-video-skill
+author: H1088880
 description: 把「AI 文生视频 + 火山引擎旁白 + 排版卡片」自动拼成一条成片的流水线 skill（一份 project.json 出一整条片）。支持竖版 9:16 / 横版 16:9、ai 镜头与 card/角标混合编排、逐镜旁白定长、烧录字幕、faststart。当用户说"做一条 AI 视频 / 短视频 / 宣传片 / 用 AI 生成镜头 / 文生视频出片 / ai video pipeline"，或要给某个产品、研学、文旅、家居等题材做竖版获客短片时使用。
 version: "2026-09-28"
 origin: github
@@ -10,6 +11,8 @@ description_en: "Assemble AI-generated clips, TTS voiceover and排版 cards into
 visibility: "public"
 ---
 > 中文触发词：AI 视频、文生视频出片、短视频流水线、宣传片短片、ai video、video pipeline。
+>
+> **作者与版权**：H1088880（Copyright (c) 2026 H1088880）。本 skill 由作者基于自研 `ai-video` 流水线改版；`scripts/vo.mjs` 火山 TTS 模块复用本人维护的 whiteboard-video（上游 trustfuture/simon-skills，MIT），详见 `LICENSE` 与 `README`。
 
 # ai-video-skill：AI 视频生产线
 
@@ -82,3 +85,11 @@ node scripts/make.mjs projects/我的短片
 3. **filter 图收尾不能是裸 label**：`[vsub][v]` 报 `No such filter: ''`，要写 `copy[v]`。
 4. **ffmpeg 输入计数别用 `inputs.length/2`**：`-loop 1` 占两个 token，要显式维护 `inputCount`。
 5. **VideoGen 并行时 `output_dir` 不可靠**：多个并行调用可能全落进最后一个目录，按文件名（含 prompt 前缀）映射回各 shot。
+
+## 作者与许可
+
+- **作者 / 版权**：[H1088880](https://github.com/H1088880) — Copyright (c) 2026 H1088880
+- **许可**：Apache License 2.0，见 `LICENSE`
+- **署名**：本 skill 由作者基于自研的 `ai-video` 流水线改版；其中 `scripts/vo.mjs` 的火山 TTS
+  模块复用本人维护的 whiteboard-video，其上游为 [trustfuture/simon-skills](https://github.com/trustfuture/simon-skills)
+  （MIT，Copyright (c) 2026 trustfuture），该部分沿用 MIT 条款并保留原版权声明。
